@@ -1,0 +1,93 @@
+/* ---------- tampilan HP / layar kecil: HUD diperkecil supaya tidak menutupi dunia 3D ---------- */
+.pill .pl u{text-decoration:none}
+@media (max-width:640px),(max-height:520px){
+  .card{border-width:2px;box-shadow:0 3px 0 var(--ink)}
+  #hud .topbar{left:8px;right:8px;top:8px;gap:6px;flex-wrap:nowrap;align-items:center}
+  #hud .stats{gap:5px;flex:1 1 auto;min-width:0;flex-wrap:nowrap}
+  #hud .pill{padding:3px 9px;gap:4px;align-items:center}
+  #hud .pill .pl{font-size:14px;letter-spacing:0}
+  #hud .pill .pl u{display:none}
+  #hud .pill[id="xp-pill"] .pl{font-size:10px;letter-spacing:.04em}
+  #hud .pill b{font-size:16px}
+  #hud .icon-btn{width:34px;height:34px;font-size:15px;border-width:2px;box-shadow:0 3px 0 var(--ink);margin-left:0;flex:none}
+  #hud .mission{display:none}
+  #hud .mission.open{display:block;position:absolute;left:8px;right:8px;top:104px;z-index:8;max-width:none;max-height:55%;overflow:auto;margin:0}
+  #hud #goal{top:52px;gap:8px;padding:5px 14px 5px 10px;pointer-events:auto;cursor:pointer}
+  #hud #g-ic{font-size:26px}
+  #hud #g-tx{font-size:18px}
+  #hud #g-pips{gap:3px;margin-top:3px}
+  #hud #g-pips i{width:9px;height:9px;border-width:1.5px}
+  #hud #guide{top:104px;width:52px;height:52px}
+  #hud #guide .ar,#hud #guide svg{width:46px;height:46px}
+  #hud #guide small{font-size:11px;bottom:-13px;padding:1px 7px}
+  #hud #inv{left:8px;top:auto;bottom:140px;transform:none;flex-direction:row;align-items:flex-end;gap:5px}
+  #hud .inv-t{display:none}
+  #hud .slot{width:46px;height:46px;border-radius:12px;border-width:2px;box-shadow:0 3px 0 var(--ink)}
+  #hud .slot .si{font-size:22px}
+  #hud .slot .sl{display:none}
+  #hud .slot .sn{font-size:9px;left:4px;top:2px}
+  #hud #drop-btn{font-size:12px;padding:3px 9px 3px 5px}
+  #hud #bot-dialog{bottom:196px;gap:8px;max-width:calc(100% - 16px)}
+  #hud .bot-av{width:46px;height:46px;border-width:2px}
+  #hud .bot-av svg{width:38px;height:38px}
+  #hud .bot-bubble{padding:7px 13px 9px;border-width:3px;border-radius:16px 16px 16px 6px}
+  #hud #bot-text{font-size:16px;line-height:1.25}
+  #hud .bot-name{font-size:9px;margin-bottom:1px}
+  #hud #prompt{bottom:146px;padding:4px 12px 4px 7px;gap:8px}
+  #hud #prompt kbd{font-size:15px;padding:1px 9px}
+  #hud .pr-main{font-size:14px}
+  #hud .pr-sub{font-size:11px;max-width:150px}
+  #hud #joy{width:104px;height:104px;left:14px;bottom:18px}
+  #hud #joy i{width:44px;height:44px;margin:-22px 0 0 -22px}
+  #hud #ebtn{width:72px;height:72px;right:16px;bottom:26px;font-size:28px}
+  #hud #areabanner{font-size:22px;padding:10px 18px;border-radius:20px}
+  #hud #areabanner small{font-size:13px}
+  #hud #choice{padding:8px}
+  #algo{padding:8px}
+  #hud #choice .c-card{max-height:80%;overflow:auto;padding:12px 14px;width:100%}
+  #hud #choice h2{font-size:20px}
+  .c-q{font-size:14px}
+  .optb{font-size:14px;padding:8px 10px;margin-top:6px}
+  #algo .a-card{padding:8px 12px 10px}
+  #algo .a-def{display:none}
+  #algo #a-goal{font-size:15px}
+  #algo .a-head{font-size:14px}
+  #algo .ablk{padding:8px 11px;font-size:15px;border-radius:12px}
+  #algo #a-run{font-size:18px;padding:8px 16px}
+  #algo .a-msg{font-size:14px;min-height:28px;margin-top:5px}
+  #algo .aslot{min-width:38px;height:32px;font-size:11px}
+  #hud #panel .p-card,#hud #p-card{max-height:78%;overflow:auto}
+}
+@media (max-height:520px){
+  #hud #bot-dialog{bottom:84px;max-width:56%}
+  #hud #prompt{bottom:16px}
+  #hud #inv{bottom:auto;top:96px;flex-direction:column}
+  #hud #goal{top:46px}
+  #hud #guide{top:92px}
+}
+
+.algo-on #goal,.algo-on #help,.algo-on #guide{display:none!important}
+.choice-on #bot-dialog{display:none!important}
+
+/* notifikasi dikecilkan di HP */
+@media (max-width:640px),(max-height:520px){
+  #hud #bot-dialog{bottom:192px;max-width:calc(100% - 130px);left:8px;transform:none;gap:6px}
+  #hud .bot-av{display:none}
+  #hud .bot-bubble{padding:5px 10px 6px;border-width:2px;border-radius:12px;opacity:.94}
+  #hud #bot-text{font-size:12.5px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  #hud .bot-name{display:none}
+  #hud #prompt{padding:3px 10px 3px 6px;gap:6px}
+  #hud .pr-main{font-size:12px}#hud .pr-sub{font-size:10px;max-width:120px}
+  #hud #areabanner{font-size:16px;padding:6px 12px;top:26%}
+  #hud #areabanner small{font-size:11px}
+  #toast{place-items:start center;padding:56px 10px 0}
+  .t-card{padding:8px 14px 10px;border-radius:16px;max-width:300px;border-width:2px;opacity:.95}
+  .t-card .t-k{font-size:9px}
+  .t-card h2{font-size:20px;margin:3px 0 2px;-webkit-text-stroke:1px var(--ink)}
+  .t-card p{font-size:11.5px;margin:2px 0;line-height:1.3}
+  .t-badge{font-size:11px;padding:2px 10px;margin-top:4px;border-width:2px}
+  #hud .float{font-size:24px;-webkit-text-stroke:2px var(--ink)}
+  #brief-btn .bb-t{display:none}
+  #hud #brief-btn{width:34px;padding:0}
+}
+@media (max-height:520px){#hud #bot-dialog{bottom:84px;left:130px;max-width:calc(100% - 300px)}}
